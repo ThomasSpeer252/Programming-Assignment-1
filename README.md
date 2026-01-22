@@ -6,6 +6,22 @@ Paulina Gonzalez-Brito - UFID:14734443
 
 
 
+Program Instructions:
+---------------------------
+1.Compile both programs
+g++ verifier.cpp -o verifier
+g++ matcher.cpp -o matcher
+
+2.Run the matcher program, output directed to example.out
+./matcher < example.in > example.out
+
+3.Using pipes, Run the verifier program
+cat example.in example.out | ./verifier
+
+
+
+
+
 
 In this assignment, you will implement the Gale Shapley algorithm for the hospital-student stable matching problem, and a separate verifier that checks whether a proposed matching is valid and stable. Your implementation must handle edge cases, such as empty files and one hospital and one student, and also check that the input is valid (i.e., equal number of hospitals and students).
 
