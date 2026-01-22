@@ -1,8 +1,8 @@
 # Programming-Assignment-1
 COP4533 Programming Assignment 1: Matching and Verifying
 
-Thomas Speer - UFID:80978847
-Paulina Gonzalez-Brito - UFID:14734443
+Thomas Speer - UFID:80978847<br>
+Paulina Gonzalez-Brito - UFID:14734443<br>
 
 
 
