@@ -6,17 +6,17 @@ Paulina Gonzalez-Brito - UFID:14734443
 
 
 
-Program Instructions:
----------------------------
-1.Compile both programs
-g++ verifier.cpp -o verifier
-g++ matcher.cpp -o matcher
-
-2.Run the matcher program, output directed to example.out
-./matcher < example.in > example.out
-
-3.Using pipes, Run the verifier program
-cat example.in example.out | ./verifier
+Program Instructions:<br>
+---------------------------<br>
+1.Compile both programs<br>
+g++ verifier.cpp -o verifier<br>
+g++ matcher.cpp -o matcher<br>
+<br>
+2.Run the matcher program, output directed to example.out<br>
+./matcher < example.in > example.out<br>
+<br>
+3.Using pipes, Run the verifier program<br>
+cat example.in example.out | ./verifier<br>
 
 
 
