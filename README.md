@@ -8,7 +8,7 @@ Paulina Gonzalez-Brito - UFID:14734443<br>
 
 Program Instructions:<br>
 ---------------------------<br>
-Compile both programs<br>
+1.Compile both programs<br>
 g++ verifier.cpp -o verifier<br>
 g++ matcher.cpp -o matcher<br>
 <br>
