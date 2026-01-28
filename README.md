@@ -24,3 +24,6 @@ X-axis: n
 Y-axis: t(ms)
 <br><br>
 <img src="graph.PNG" alt="Alt text" width="1000"/>
+
+Task C:
+The runtime graph seems to be following an exponential curve. As n increases the runtime gets exponentially larger. When n<64 the runtime is displaying as less than 1ms, after n>64 the runtime gets larger and larger.
