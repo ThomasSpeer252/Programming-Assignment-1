@@ -22,4 +22,4 @@ cat example.in example.out | ./verifier<br>
 Graph of Runtime
 X-axis: n
 Y-axis: t(ms)
-[Alt text](graph.png)
+[Alt text](graph.PNG)
