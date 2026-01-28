@@ -17,3 +17,9 @@ g++ matcher.cpp -o matcher<br>
 <br>
 3.Using pipes, Run the verifier program<br>
 cat example.in example.out | ./verifier<br>
+
+-------------------------------------------
+Graph of Runtime
+X-axis: n
+Y-axis: t(ms)
+[Alt text](graph.png)
