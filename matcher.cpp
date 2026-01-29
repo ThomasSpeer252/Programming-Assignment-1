@@ -8,7 +8,20 @@ int main()
     // Input Format: The input describes preferences for a one-to-one market with complete strict rankings.
     //First line: integer n.
     int n;
-    cin >> n;
+
+    // Handle edge case where input is an empty file
+    if (!(cin >> n))
+    {
+        cerr << "Error: Empty File." << endl;
+        return 1;
+    }
+
+    // Handle edge case where n is negative/zero
+    if (n <= 0)
+    {
+        cerr << "Error: Negative numbers or zero as input is not acceptable." << endl;
+        return 1;
+    }
 
     // Next n lines: hospital preference lists.
     vector<vector<int>> hospitalPreferences(n + 1, vector<int>(n));
@@ -18,17 +31,66 @@ int main()
 
     for (int h = 1; h <= n; h++)
     {
+        // Use bool to track if any duplicates are present (violates G-S)
+        bool duplicateHospital[n + 1] = {false};
+
         for (int i = 0; i < n; i++)
         {
-            cin >> hospitalPreferences[h][i];
+            // Handle uneven input
+            if (!(cin >> hospitalPreferences[h][i]))
+            {
+                cerr << "Error: Invalid input." << endl;
+                return 1;
+            }
+
+            // Check input is valid
+            if (hospitalPreferences[h][i] < 1 || hospitalPreferences[h][i] > n)
+            {
+                cerr << "Error: Invalid input.";
+                return 1;
+            }
+
+            // Raise error if duplicates present
+            if (duplicateHospital[hospitalPreferences[h][i]])
+            {
+                cerr << "Error: Invalid input.";
+                return 1;
+            }
+
+            duplicateHospital[hospitalPreferences[h][i]] = true;
         }
     }
 
+
     for (int a = 1; a <= n; a++)
     {
+        // Use bool to track if any duplicates are present (violates G-S)
+        bool duplicateStudent[n + 1] = {false};
+
         for (int i = 0; i < n; i++)
         {
-            cin >> studentPreferences[a][i];
+            // Handle uneven input
+            if (!(cin >> studentPreferences[a][i]))
+            {
+                cerr << "Error: Invalid input." << endl;
+                return 1;
+            }
+
+            // Check input is valid
+            if (studentPreferences[a][i] < 1 || studentPreferences[a][i] > n)
+            {
+                cerr << "Error: Invalid input.";
+                return 1;
+            }
+
+            // Raise error if duplicates present
+            if (duplicateStudent[studentPreferences[a][i]])
+            {
+                cerr << "Error: Invalid input.";
+                return 1;
+            }
+
+            duplicateStudent[studentPreferences[a][i]] = true;
         }
     }
 
@@ -91,7 +153,7 @@ int main()
 
             if (preferred == h)
             {
-                studentPaired[a] == h;
+                studentPaired[a] = h;
                 freeHospitals.push(current);
             }
 
